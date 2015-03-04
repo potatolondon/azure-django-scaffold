@@ -1,0 +1,5 @@
+Django==1.7.1
+
+azure==0.9.0
+django-redis-cache==0.13.0
+wsgiref==0.1.2

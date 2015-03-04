@@ -1,0 +1,28 @@
+aliases:
+  - 'sass:styles'
+sass:
+  options:
+    style: 'expanded'
+  files:
+    '<%= ui %>/css/<%= package.name %>.css' : '<%= ui %>/scss/<%= package.name %>.scss'
+csso:
+  src: '<%= ui %>/css/<%= package.name %>.css'
+  dest: '<%= build %>/css/<%= package.name %>.css'
+notify:
+  options:
+    title: 'Sass files are compiled!'
+    message: 'SCSS files have been compiled and autoprefixed'
+watch:
+  files:
+    - '<%= ui %>/scss/**/*.scss'
+  tasks:
+    - 'styles'
+    - 'notify:styles'
+  options:
+    livereload: false
+watch__css:
+  files:
+      - '<%= ui %>/css/**/*.css'
+  tasks: []
+  options:
+    livereload: true

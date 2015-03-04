@@ -1,0 +1,4 @@
+-r base.txt
+
+Fabric==1.10.0
+pycrypto==2.6.1

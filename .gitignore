@@ -1,0 +1,6 @@
+package.json
+/media/
+/node_modules/
+{{ project_name }}/static/css/*
+*.sqlite3
+.sass-cache/

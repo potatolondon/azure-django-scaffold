@@ -1,0 +1,23 @@
+aliases:
+  - 'clean'
+  - 'styles'
+  - 'csso'
+  - 'copy:build'
+  - 'ver'
+clean:
+  - '<%= build %>/*'
+copy:
+  expand: true
+  src: ['**']
+ver:
+  phases:
+    - files:
+      - '<%= build %>/img/*'
+      references:
+      - '<%= build %>/css/*.css'
+    - files:
+      - '<%= build %>/css/**/*.css'
+      - '<%= build %>/js/**/*.js'
+      references:
+      - '<%= templates %>/**/*.html'
+  versionFile: '<%= build %>/version.json'
