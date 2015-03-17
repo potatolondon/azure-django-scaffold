@@ -1,1 +1,3 @@
 -r base.txt
+
+hg+https://bitbucket.org/mattdoughty/django-storages/@d017250#egg=storages
