@@ -39,8 +39,8 @@ You need a Python Azure Website, storage account, Redis cache and SQL database. 
 Add a git remote called 'azure' with your deployment credentials (found in the Azure management portal). Then:
 
 * `fab prepare` - this builds static files and commits changes
-* `git push azure master`
-* `git reset --hard HEAD~2`
+* `git push azure master -vf` - this pushes to Azure and runs deployment script
+* `git reset --hard HEAD~2` - you don't want versioned static files in your repo
 
 {% endif %}
 # {{ project_name|title }}
